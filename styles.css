@@ -5,7 +5,7 @@
 }
 body {
     background-image: url(./images/bg-top.svg);
-    background-position: 250% 0;
+    background-position: 12rem 0;
     background-repeat: no-repeat;
     background-color: hsl(240, 78%, 98%);
     font-family: Arial, Helvetica, sans-serif;
@@ -14,12 +14,25 @@ body {
 .center-title {
     margin-top: 3rem;
     text-align: center;
+    color:hsl(233, 13%, 49%);
 }
 /*boton de switch*/
+.switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 75%;
+    margin: 1rem auto 1rem auto;
+}
+
+.switch-container p {
+    color:hsl(234, 14%, 74%);
+    font-weight: bold;
+}
 .switchBtn {
     position: relative;
     display: inline-block;
-    width: 110px;
+    width: 5rem;
     height: 34px;
 }
 .switchBtn input {display:none;}
@@ -41,7 +54,7 @@ body {
     content: "";
     height: 26px;
     width: 26px;
-    left: 78px;
+    left: 3rem;
     bottom: 4px;
     background-color: white;
     -webkit-transition: .4s;
@@ -64,15 +77,6 @@ input:checked + .slide:before {
 
 .round {
     border-radius: 20px;
-}
-
-
-.switch-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 60%;
-    margin: 1rem auto 1rem auto;
 }
 
 .cards-container {
@@ -104,7 +108,7 @@ input:checked + .slide:before {
     margin-bottom: 1rem;
 }
 .card .price {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
     padding-bottom: 1.5rem;
     margin: 0;
@@ -132,4 +136,45 @@ input:checked + .slide:before {
     border-radius: 10px;
     padding: 0.5rem;
     width: 80%;
+}
+
+footer {
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/*Estilos para escritorio*/
+@media (min-width: 1024px) {
+    body {
+        background-position: right;
+    }
+    .switch-container {
+        width: 40%;
+    }
+    .cards-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .cards-container .card:nth-child(1),
+    .cards-container .card:nth-child(3) {
+        max-height: 420px;
+    }
+    .cards-container .card:nth-child(1){
+        border-radius: 10px 0 0 10px;
+    }
+    .cards-container .card:nth-child(3){
+        border-radius: 0 10px 10px 0;
+    }
+
+    .card {
+        box-shadow: #666 0 0 1px;
+    }
+
+    
 }
